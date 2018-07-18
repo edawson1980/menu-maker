@@ -7,6 +7,16 @@ let menu = {
     mains: [],
     desserts: []
   }
+  /*CREATE GETTER METHOD FOR THE COURSES OBJECT*/
+  get courses(){
+    return{
+      appetizers: this._courses.appetizers,
+      mains: this._courses.mains,
+      desserts: this._courses.desserts
+
+    }
+  },
+
   /*CREATE GETTERS AND SETTERS FOR EACH VALUE*/
   get appetizers(){
 
@@ -24,7 +34,9 @@ let menu = {
 
   },
   set desserts(dessertInput){
-    
-  }
+
+  },
+  /*ADD DISH METHOD*/
+  addDishToCourse(courseName, dishName, dishPrice){},
 
 }
