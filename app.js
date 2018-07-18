@@ -37,6 +37,22 @@ let menu = {
 
   },
   /*ADD DISH METHOD*/
-  addDishToCourse(courseName, dishName, dishPrice){},
+  addDishToCourse(courseName, dishName, dishPrice){
+    let dish = {
+      name: this.dishName,
+      price: this.dishPrice
+    }
+    /*use the courseName property to determine which array the new dish gets added to within the Courses object*/
+    this._courses[courseName].push(dish);
+  },
+
+  /*GET RANDOM DISH METHOD*/
+  getRandomDishFromCourse(courseName){
+    let dishes = this._courses[courseName];
+
+    let index = Math.floor(Math.random()*dishes.length);
+
+    return this.dishes[index]
+  }
 
 }
